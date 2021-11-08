@@ -7,3 +7,5 @@ OR
 From CMD, navigate to the Project directory and run the below commands
 a.	mvn compile
 b.	mvn test
+
+Note: Your machine should have Java and Maven installed.

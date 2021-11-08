@@ -9,3 +9,4 @@ a.	mvn compile
 b.	mvn test
 
 Note: Your machine should have Java and Maven installed.
+Test data is passed on From Excel file

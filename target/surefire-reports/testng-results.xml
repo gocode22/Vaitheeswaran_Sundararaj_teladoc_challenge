@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-07T20:14:23 CST" name="Suite" finished-at="2021-11-07T20:14:37 CST" duration-ms="14655">
+    <groups>
+    </groups>
+    <test started-at="2021-11-07T20:14:23 CST" name="Add New User" finished-at="2021-11-07T20:14:32 CST" duration-ms="9861">
+      <class name="teladoc_challenge.AddNewUser">
+        <test-method is-config="true" signature="initilizeDriver()[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-07T20:14:23 CST" name="initilizeDriver" finished-at="2021-11-07T20:14:25 CST" duration-ms="2637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initilizeDriver -->
+        <test-method signature="addNewUser(java.lang.String)[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-07T20:14:26 CST" name="addNewUser" data-provider="RegisterationDataProvider" finished-at="2021-11-07T20:14:30 CST" duration-ms="4601" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FirstNameTeladoc;LastNameTeladoc;TeladocUserOne;Password@1014;15;2;NameRam@gmail.com;1234567890]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewUser -->
+        <test-method signature="addNewUser(java.lang.String)[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-07T20:14:31 CST" name="addNewUser" data-provider="RegisterationDataProvider" finished-at="2021-11-07T20:14:32 CST" duration-ms="1814" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TEST;Teladoc;TeladocUserTwo;Password@1015;15;2;NameRamTeladoc@gmail.com;1234567891]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewUser -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-07T20:14:32 CST" name="teardown" finished-at="2021-11-07T20:14:32 CST" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- teladoc_challenge.AddNewUser -->
+    </test> <!-- Add New User -->
+    <test started-at="2021-11-07T20:14:33 CST" name="Delete User" finished-at="2021-11-07T20:14:37 CST" duration-ms="4390">
+      <class name="teladoc_challenge.DeleteRecord">
+        <test-method is-config="true" signature="initilizeDriver()[pri:0, instance:teladoc_challenge.DeleteRecord@5c1bd44c]" started-at="2021-11-07T20:14:33 CST" name="initilizeDriver" finished-at="2021-11-07T20:14:34 CST" duration-ms="1608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initilizeDriver -->
+        <test-method signature="DeleteUser(java.lang.String)[pri:0, instance:teladoc_challenge.DeleteRecord@5c1bd44c]" started-at="2021-11-07T20:14:34 CST" name="DeleteUser" data-provider="getDeleteData" finished-at="2021-11-07T20:14:37 CST" duration-ms="2697" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[novak]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteUser -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:teladoc_challenge.DeleteRecord@5c1bd44c]" started-at="2021-11-07T20:14:37 CST" name="teardown" finished-at="2021-11-07T20:14:37 CST" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- teladoc_challenge.DeleteRecord -->
+    </test> <!-- Delete User -->
+  </suite> <!-- Suite -->
+</testng-results>

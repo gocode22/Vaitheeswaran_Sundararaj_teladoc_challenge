@@ -8,5 +8,6 @@ From CMD, navigate to the Project directory and run the below commands
 a.	mvn compile
 b.	mvn test
 
-Note: Your machine should have Java and Maven installed.
-Test data is passed on From Excel file
+Note: Your machine should have Java and Maven installed. Incase if you are unable to run the test cases at pom.xml level due dependencies errors, try running it directly from the test folder ‘/src/test/java’ by right clicking and choosing the option ‘Run As – TestNg Test’.
+
+**Test data is passed on From Excel file

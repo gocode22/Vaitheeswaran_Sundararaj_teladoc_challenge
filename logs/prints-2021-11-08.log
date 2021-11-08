@@ -1,0 +1,6 @@
+09:40:40.485 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0x68116ace19c14848
+09:40:40.629 [main] INFO  teladoc_challenge.DriverSetup - Driver is initilized
+09:40:46.041 [main] INFO  teladoc_challenge.DriverSetup - Record saved successfully
+09:40:46.131 [main] INFO  teladoc_challenge.DriverSetup - Add User Test completed
+09:40:48.532 [main] INFO  teladoc_challenge.DriverSetup - Record saved successfully
+09:40:48.631 [main] INFO  teladoc_challenge.DriverSetup - Add User Test completed

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="teladoc_challenge.AddNewUser">
+      <class name="teladoc_challenge.DeleteRecord">
         <methods>
+          <include name="DeleteUser"/>
           <include name="teardown"/>
-          <include name="addNewUser" invocation-numbers="0 1"/>
           <include name="initilizeDriver"/>
         </methods>
-      </class> <!-- teladoc_challenge.AddNewUser -->
+      </class> <!-- teladoc_challenge.DeleteRecord -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,6 +1,8 @@
 package teladoc_challenge;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,8 +27,17 @@ public class DeleteRecord extends DriverSetup{
 		
 	}
 	
+	@DataProvider(name="DeleteDatas")
+	public Iterator<String> getDatafromExcel()
+	{
+		ArrayList<String> dataListexcel = Utilities.getRegisterData("DeleteRecord");
+		//System.out.println(dataListexcel);
+		return dataListexcel.iterator();
+	}
+	
+	
 
-	@Test(dataProvider = "getDeleteData")
+	@Test(dataProvider = "DeleteDatas")
 	public void DeleteUser(String userName) throws IOException {
 		
 			String testurl = prop.getProperty("url");
@@ -35,11 +46,13 @@ public class DeleteRecord extends DriverSetup{
 			driver.manage().window().maximize();
 			SoftAssert a =new SoftAssert();
 			
+			String[] inputdata = userName.split(";");
+			
 			LandingPageDeleteRecord lPageDeleteRecord = new LandingPageDeleteRecord(driver);
 			log.info("Test completed");
 			//lpage.getTable();
 			
-			lPageDeleteRecord.getSpecificRow(userName).click();
+			lPageDeleteRecord.getSpecificRow(inputdata[0]).click();
 			//lPageDeleteRecord.getbtnDeleteCancel().click();
 			lPageDeleteRecord.getbtnDeleteConfirm().click();
 			
@@ -57,15 +70,15 @@ public class DeleteRecord extends DriverSetup{
 		
 		
 	
-		@DataProvider
-		public Object[][] getDeleteData() {
-			
-			
-			Object[][] dataObjects = new Object[1][1];
-			
-			dataObjects[0][0] = "novak";
-			return dataObjects;
-			
-		}
+//		@DataProvider
+//		public Object[][] getDeleteData() {
+//			
+//			
+//			Object[][] dataObjects = new Object[1][1];
+//			
+//			dataObjects[0][0] = "novak";
+//			return dataObjects;
+//			
+//		}
 	
 }

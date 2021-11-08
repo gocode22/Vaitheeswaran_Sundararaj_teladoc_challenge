@@ -33,7 +33,7 @@ public class AddNewUser extends DriverSetup{
 	@DataProvider(name="RegisterationDataProvider")
 	public Iterator<String> getDatafromExcel()
 	{
-		ArrayList<String> dataListexcel = Utilities.getRegisterData();
+		ArrayList<String> dataListexcel = Utilities.getRegisterData("RegisterData");
 		System.out.println(dataListexcel);
 		return dataListexcel.iterator();
 	}

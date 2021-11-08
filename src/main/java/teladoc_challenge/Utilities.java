@@ -20,17 +20,18 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Utilities {
 	
-	public static ArrayList<String>getRegisterData()
+	public static ArrayList<String>getRegisterData(String Name)
 	{
 		System.out.print(System.getProperty("user.dir"));
 	File file =    new File(System.getProperty("user.dir") + "\\TestData\\RegisterTestData.xlsx");
 	FileInputStream inputStream;
 	ArrayList<String> registerData = new ArrayList<String>();
+	
 	try {
 		inputStream = new FileInputStream(file);
 		XSSFWorkbook wb=new XSSFWorkbook(inputStream);
 		XSSFFormulaEvaluator.evaluateAllFormulaCells(wb);
-		XSSFSheet sheet=wb.getSheet("RegisterData");
+		XSSFSheet sheet = wb.getSheet(Name) ;
 		
 		for (Row myrow : sheet) {
 			if(myrow.getRowNum()==0) continue;

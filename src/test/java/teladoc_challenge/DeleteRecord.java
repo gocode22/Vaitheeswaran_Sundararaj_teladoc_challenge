@@ -42,7 +42,6 @@ public class DeleteRecord extends DriverSetup {
 		String[] inputdata = userName.split(";");
 
 		LandingPageDeleteRecord lPageDeleteRecord = new LandingPageDeleteRecord(driver);
-		log.info("Test completed");
 
 		lPageDeleteRecord.getSpecificRow(inputdata[0]).click();
 		lPageDeleteRecord.getbtnDeleteConfirm().click();
@@ -51,7 +50,7 @@ public class DeleteRecord extends DriverSetup {
 		String uNamerNotFound = landingPage.getSpecificRow(userName);
 
 		Assert.assertEquals(uNamerNotFound, "");
-		log.info("Test completed");
+		log.info("Delete User Test is completed and the user is not found under the table");
 	}
 
 	@AfterTest

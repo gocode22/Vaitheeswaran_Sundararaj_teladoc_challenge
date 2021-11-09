@@ -81,7 +81,7 @@ public class AddNewUser extends DriverSetup {
 		String uNamerFound = lpage.getSpecificRow(hm.get("uname"));
 		Assert.assertEquals(hm.get("uname"), uNamerFound);
 
-		log.info("Add User Test completed");
+		log.info("Add User Test is completed and the new user is found under the table");
 
 	}
 

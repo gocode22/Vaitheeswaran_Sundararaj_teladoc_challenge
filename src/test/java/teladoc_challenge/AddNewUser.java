@@ -77,7 +77,7 @@ public class AddNewUser extends DriverSetup {
 		lpage.getbtnSave().click();
 		log.info("Record saved successfully");
 
-		// check the table is updated with the new user details
+		// Check the table is updated with the new user details
 		String uNamerFound = lpage.getSpecificRow(hm.get("uname"));
 		Assert.assertEquals(hm.get("uname"), uNamerFound);
 

@@ -1,13 +1,12 @@
 package teladoc_challenge;
 
-import java.util.HashMap;
+
 import java.util.List;
 
-import org.apache.poi.ss.format.CellTextFormatter;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -68,7 +67,7 @@ public class LandingPage {
 
 		return rlVisible;
 	}
-	
+
 	public boolean getReqFMElemIsNotVisible() {
 
 		boolean fnVisible = driver.findElement(txtFNameRequired).isDisplayed();
@@ -106,7 +105,7 @@ public class LandingPage {
 
 	public WebElement radioBtnSelect(String cd) {
 		WebElement rdb1 = null;
-		
+
 		if (Integer.parseInt(cd) == 15) {
 			rdb1 = driver.findElement(radioBtnCompanAAA);
 		} else if (Integer.parseInt(cd) == 16) {
@@ -166,10 +165,6 @@ public class LandingPage {
 		}
 		return userNameFound;
 
-
 	}
-	
-	
-	
 
 }

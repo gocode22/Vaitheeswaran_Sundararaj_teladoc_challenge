@@ -34,7 +34,6 @@ public class LandingPageDeleteRecord {
 			if (firstNameClm != null && firstNameClm.equals(name)) {
 				System.out.println(count);
 				String pathString = before_XPath + count + after_XPath;
-				// System.out.println(table.findElement(By.xpath(pathString)).getText());
 				deletElement = table.findElement(By.xpath(pathString));
 				return deletElement;
 			}

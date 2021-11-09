@@ -12,66 +12,57 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DriverSetup {
-	
+
 	private static WebDriver driver;
 	public static Properties prop;
-	
-	//public static Properties prop;
+
 	@SuppressWarnings("deprecation")
-	public static WebDriver getWebDriver() throws IOException{
-		
-	//Property file path	
-			prop = new Properties();
-			
-			 FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\teladoc_challenge\\data.properties");
-			 prop.load(fis);
-			 String browserName=prop.getProperty("browser");
-			 System.out.println(browserName);
-		
-			String path = System.getProperty("user.dir");
-			String driverPathChrome = path+"\\src\\main\\java\\resources\\DriverFiles\\chromedriver.exe";
-			String driverPathFirbox = path+"\\src\\main\\java\\resources\\DriverFiles\\geckodriver.exe";
-			 
-		//select browser name based on the value from properties file 
-		switch(browserName) {
-		
+	public static WebDriver getWebDriver() throws IOException {
+
+		// Property file path
+		prop = new Properties();
+
+		FileInputStream fis = new FileInputStream(
+				System.getProperty("user.dir") + "\\src\\main\\java\\teladoc_challenge\\data.properties");
+		prop.load(fis);
+		String browserName = prop.getProperty("browser");
+
+		String path = System.getProperty("user.dir");
+		String driverPathChrome = path + "\\src\\main\\java\\resources\\DriverFiles\\chromedriver.exe";
+		String driverPathFirbox = path + "\\src\\main\\java\\resources\\DriverFiles\\geckodriver.exe";
+
+		// select browser name based on the value from properties file
+		switch (browserName) {
+
 		case "chrome":
-			
+
 			System.setProperty("webdriver.chrome.driver", driverPathChrome);
 			driver = new ChromeDriver();
 			break;
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", driverPathFirbox);
-			 driver = new FirefoxDriver();
-			 break;
+			driver = new FirefoxDriver();
+			break;
 		default:
 			System.setProperty("webdriver.chrome.driver", driverPathChrome);
 			driver = new ChromeDriver();
-			 break;
+			break;
 		}
-		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-		 
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 		return driver;
-		
+
 	}
-	
-	
-	
-	public String getScreenShotPath(String testCaseName,WebDriver driver) throws IOException
-	{
-		TakesScreenshot ts=(TakesScreenshot) driver;
-		File source =ts.getScreenshotAs(OutputType.FILE);
-		String destinationFile = System.getProperty("user.dir")+"\\reports\\"+testCaseName+".png";
-		FileUtils.copyFile(source,new File(destinationFile));
+
+	public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir") + "\\reports\\" + testCaseName + ".png";
+		FileUtils.copyFile(source, new File(destinationFile));
 		return destinationFile;
 
-
 	}
-
-	
 
 }

@@ -1,6 +1,6 @@
-11:29:40.198 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0xee1d8cc08f26f88f
-11:29:40.254 [main] INFO  teladoc_challenge.DriverSetup - Driver is initilized
-11:29:44.269 [main] INFO  teladoc_challenge.DriverSetup - Record saved successfully
-11:29:44.319 [main] INFO  teladoc_challenge.DriverSetup - Add User Test completed
-11:29:45.747 [main] INFO  teladoc_challenge.DriverSetup - Record saved successfully
-11:29:45.793 [main] INFO  teladoc_challenge.DriverSetup - Add User Test completed
+20:44:54.732 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0xe4ca1d2b061fbd3c
+20:44:54.851 [main] INFO  teladoc_challenge.DriverSetup - Driver is initilized
+20:45:01.413 [main] INFO  teladoc_challenge.DriverSetup - Record saved successfully
+20:45:01.510 [main] INFO  teladoc_challenge.DriverSetup - Add User Test completed
+20:45:04.875 [main] INFO  teladoc_challenge.DriverSetup - Driver is initilized
+20:45:07.454 [main] INFO  teladoc_challenge.DriverSetup - Test completed

@@ -10,6 +10,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+//This class takes screenshots upon failures and add it under reports and also adds logs for Pass cases
 public class Listeners extends DriverSetup implements ITestListener{
 
 	

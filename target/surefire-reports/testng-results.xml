@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-08T20:44:49 CST" name="Suite" finished-at="2021-11-08T20:45:08 CST" duration-ms="18799">
+  <suite started-at="2021-11-08T21:27:52 CST" name="Suite" finished-at="2021-11-08T21:28:11 CST" duration-ms="18812">
     <groups>
     </groups>
-    <test started-at="2021-11-08T20:44:49 CST" name="Add New User" finished-at="2021-11-08T20:45:01 CST" duration-ms="12288">
+    <test started-at="2021-11-08T21:27:52 CST" name="Add New User" finished-at="2021-11-08T21:28:04 CST" duration-ms="11776">
       <class name="teladoc_challenge.AddNewUser">
-        <test-method is-config="true" signature="initilizeDriver()[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-08T20:44:49 CST" name="initilizeDriver" finished-at="2021-11-08T20:44:54 CST" duration-ms="5343" status="PASS">
+        <test-method is-config="true" signature="initilizeDriver()[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-08T21:27:52 CST" name="initilizeDriver" finished-at="2021-11-08T21:27:57 CST" duration-ms="4295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initilizeDriver -->
-        <test-method signature="addNewUser(java.lang.String)[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-08T20:44:56 CST" name="addNewUser" data-provider="RegisterationDataProvider" finished-at="2021-11-08T20:45:01 CST" duration-ms="5276" status="PASS">
+        <test-method signature="addNewUser(java.lang.String)[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-08T21:27:58 CST" name="addNewUser" data-provider="RegisterationDataProvider" finished-at="2021-11-08T21:28:04 CST" duration-ms="5912" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,19 +22,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewUser -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-08T20:45:01 CST" name="teardown" finished-at="2021-11-08T20:45:01 CST" duration-ms="270" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:teladoc_challenge.AddNewUser@2a2da905]" started-at="2021-11-08T21:28:04 CST" name="teardown" finished-at="2021-11-08T21:28:04 CST" duration-ms="270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- teladoc_challenge.AddNewUser -->
     </test> <!-- Add New User -->
-    <test started-at="2021-11-08T20:45:02 CST" name="Delete User" finished-at="2021-11-08T20:45:08 CST" duration-ms="5713">
+    <test started-at="2021-11-08T21:28:05 CST" name="Delete User" finished-at="2021-11-08T21:28:11 CST" duration-ms="6304">
       <class name="teladoc_challenge.DeleteRecord">
-        <test-method is-config="true" signature="initilizeDriver()[pri:0, instance:teladoc_challenge.DeleteRecord@3ec11999]" started-at="2021-11-08T20:45:02 CST" name="initilizeDriver" finished-at="2021-11-08T20:45:04 CST" duration-ms="2286" status="PASS">
+        <test-method is-config="true" signature="initilizeDriver()[pri:0, instance:teladoc_challenge.DeleteRecord@3ec11999]" started-at="2021-11-08T21:28:05 CST" name="initilizeDriver" finished-at="2021-11-08T21:28:07 CST" duration-ms="2405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initilizeDriver -->
-        <test-method signature="DeleteUser(java.lang.String)[pri:0, instance:teladoc_challenge.DeleteRecord@3ec11999]" started-at="2021-11-08T20:45:04 CST" name="DeleteUser" data-provider="DeleteDatas" finished-at="2021-11-08T20:45:08 CST" duration-ms="3075" status="PASS">
+        <test-method signature="DeleteUser(java.lang.String)[pri:0, instance:teladoc_challenge.DeleteRecord@3ec11999]" started-at="2021-11-08T21:28:07 CST" name="DeleteUser" data-provider="DeleteDatas" finished-at="2021-11-08T21:28:11 CST" duration-ms="3397" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,7 +45,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DeleteUser -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:teladoc_challenge.DeleteRecord@3ec11999]" started-at="2021-11-08T20:45:08 CST" name="teardown" finished-at="2021-11-08T20:45:08 CST" duration-ms="277" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:teladoc_challenge.DeleteRecord@3ec11999]" started-at="2021-11-08T21:28:11 CST" name="teardown" finished-at="2021-11-08T21:28:11 CST" duration-ms="422" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

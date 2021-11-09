@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
+//this delete the users based on the user name passed on to from excel
 public class DeleteRecord extends DriverSetup {
 
 	public WebDriver driver;

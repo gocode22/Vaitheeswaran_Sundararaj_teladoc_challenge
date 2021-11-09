@@ -19,6 +19,8 @@ public class DriverSetup {
 	public static Properties prop;
 
 	@SuppressWarnings("deprecation")
+	
+	//This method initiates and returns the driver
 	public static WebDriver getWebDriver() throws IOException {
 
 		// Property file path
@@ -56,6 +58,7 @@ public class DriverSetup {
 
 	}
 
+	//This method takes the screenshot
 	public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);

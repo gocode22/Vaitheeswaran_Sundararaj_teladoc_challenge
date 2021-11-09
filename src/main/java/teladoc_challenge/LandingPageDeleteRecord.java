@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+//This class has the page objects of Delete user
 public class LandingPageDeleteRecord {
 
 	public WebDriver driver;
@@ -14,7 +15,6 @@ public class LandingPageDeleteRecord {
 	By btnDeleteConfirm = By.xpath("//button[@class='btn ng-scope ng-binding btn-primary']");
 	By btnDeleteCancel = By.xpath("//button[@class='btn ng-scope ng-binding']");
 
-	// this is to get the row dynamically based on the first name supplied from test
 	String before_XPath = "//table/tbody/tr[";
 	String after_XPath = "]/td[11]/button";
 

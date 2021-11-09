@@ -5,7 +5,7 @@
 	</Properties>
  
   <Appenders>
-      <RollingFile name="File" fileName="${basePath}/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+      <RollingFile name="File" fileName="${basePath}/teladoc_challenge_Test_Case_Status.log" filePattern="${basePath}/teladoc_challenge_Test_Steps_Log-%d{yyyy-MM-dd}.log">
      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
       <SizeBasedTriggeringPolicy size="500" />
           </RollingFile>

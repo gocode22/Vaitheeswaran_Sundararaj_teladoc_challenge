@@ -10,6 +10,7 @@ public class  ExtendReporterNG {
 	
 	static ExtentReports extent;
 	
+	//This method creates the reports
 	@BeforeTest
 	public static ExtentReports getReportObjects() {
 	

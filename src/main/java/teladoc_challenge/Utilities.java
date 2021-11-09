@@ -14,6 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Utilities {
 
+//This methods reads the excel based on the sheet name passed on and returns the values
 	public static ArrayList<String> getRegisterData(String Name) {
 		File file = new File(System.getProperty("user.dir") + "\\TestData\\RegisterTestData.xlsx");
 		FileInputStream inputStream;

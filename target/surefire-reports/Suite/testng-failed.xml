@@ -9,21 +9,10 @@
       <class name="teladoc_challenge.AddNewUser">
         <methods>
           <include name="teardown"/>
-          <include name="addNewUser"/>
+          <include name="addNewUser" invocation-numbers="0"/>
           <include name="initilizeDriver"/>
         </methods>
       </class> <!-- teladoc_challenge.AddNewUser -->
     </classes>
   </test> <!-- Add New User(failed) -->
-  <test thread-count="5" name="Delete User(failed)" verbose="0">
-    <classes>
-      <class name="teladoc_challenge.DeleteRecord">
-        <methods>
-          <include name="DeleteUser"/>
-          <include name="teardown"/>
-          <include name="initilizeDriver"/>
-        </methods>
-      </class> <!-- teladoc_challenge.DeleteRecord -->
-    </classes>
-  </test> <!-- Delete User(failed) -->
 </suite> <!-- Failed suite [Suite] -->

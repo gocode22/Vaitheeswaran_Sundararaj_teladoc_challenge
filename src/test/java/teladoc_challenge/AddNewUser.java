@@ -15,7 +15,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import org.testng.asserts.SoftAssert;
-
+// this test adds new users
 public class AddNewUser extends DriverSetup {
 
 	public WebDriver driver;

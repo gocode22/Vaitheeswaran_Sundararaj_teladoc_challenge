@@ -1,1 +1,2 @@
-21:32:56.126 [main] INFO  teladoc_challenge.DriverSetup - Delete User Test is completed and the user is not found under the table
+21:37:52.894 [AsyncHttpClient-1-4] DEBUG io.netty.buffer.PoolThreadCache - Freed 3 thread-local buffer(s) from thread: AsyncHttpClient-1-4
+21:37:52.894 [AsyncHttpClient-1-3] DEBUG io.netty.buffer.PoolThreadCache - Freed 2 thread-local buffer(s) from thread: AsyncHttpClient-1-3

@@ -35,7 +35,7 @@ public class DriverSetup {
 		String driverPathChrome = path + "\\src\\main\\java\\resources\\DriverFiles\\chromedriver.exe";
 		String driverPathFirbox = path + "\\src\\main\\java\\resources\\DriverFiles\\geckodriver.exe";
 
-		// select browser name based on the value from properties file
+		// select browser name based on the value from the properties file
 		switch (browserName) {
 
 		case "chrome":

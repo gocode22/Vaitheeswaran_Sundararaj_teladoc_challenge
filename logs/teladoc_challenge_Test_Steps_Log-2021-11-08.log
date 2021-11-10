@@ -1,6 +1,5 @@
-21:37:37.592 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0x597a76ef341c1db0
-21:37:37.749 [main] INFO  teladoc_challenge.DriverSetup - Driver is initilized
-21:37:45.174 [main] INFO  teladoc_challenge.DriverSetup - Record saved successfully
-21:37:45.312 [main] INFO  teladoc_challenge.DriverSetup - Add User Test is completed and the new user is found under the table
-21:37:48.848 [main] INFO  teladoc_challenge.DriverSetup - Driver is initilized
-21:37:52.291 [main] INFO  teladoc_challenge.DriverSetup - Delete User Test is completed and the user is not found under the table
+21:53:28.648 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+21:53:28.654 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
+21:53:28.655 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+21:53:28.655 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.delayedQueue.ratio: 8
+21:53:31.044 [AsyncHttpClient-1-2] DEBUG io.netty.handler.codec.compression.Brotli - brotli4j not in the classpath; Brotli support will be unavailable.

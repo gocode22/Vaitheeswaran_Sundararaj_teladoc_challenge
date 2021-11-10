@@ -43,8 +43,12 @@ public class LandingPage {
 	By btnClose = By.xpath("//button[@class='btn btn-danger']");
 
 	// this is to get the row dynamically based on the first name supplied from test
-	String before_XPath = "//table/tbody/tr[";
-	String after_XPath = "]/td[3]";
+	By pageNumber = By.cssSelector("li:nth-child(2) a");
+	By clickNextPage = By.cssSelector("li:nth-child(3) a");
+	By clickBeforePage = By.cssSelector("li:nth-child(1) a");
+	By userNameClickSort = By.xpath("//span[@class='header-content ng-scope ng-binding sort-descent']");
+	By noNextBtn = By.xpath("//li[@class='ng-scope disabled'][2]");
+	
 
 	public LandingPage(WebDriver driver) {
 		this.driver = driver;
@@ -147,24 +151,28 @@ public class LandingPage {
 
 	public String getSpecificRow(String name) {
 
-		WebElement table = driver.findElement(tblWebTable);
-		List<WebElement> rowsList = table.findElements(tblFNameColum);
-		String userNameFound = "";
-		int count = 0;
-		for (WebElement row : rowsList) {
-
-			String firstNameClm = row.getText();
-			++count;
-
-			if (firstNameClm != null && firstNameClm.equals(name)) {
-
-				String pathString = before_XPath + count + after_XPath;
-				userNameFound = table.findElement(By.xpath(pathString)).getText();
-				return userNameFound;
+		boolean founName = false;
+		String nameFound = "";
+		while(!founName) {
+			
+			List<WebElement> userNamesOnCurrentPage = driver.findElements(By.xpath("//table/tbody/tr/td[3][normalize-space()='"+name+"']"));
+			List<WebElement> disableNextBtn = driver.findElements(noNextBtn);
+			
+			if(userNamesOnCurrentPage.size() >0) {
+				founName = true;
+				
+			}else if(disableNextBtn.size()==0) {
+				
+				driver.findElement(clickNextPage).click();
+			
 			}
-
+			else {
+				return "";
+			}
+		
 		}
-		return userNameFound;
+		nameFound = driver.findElement(By.xpath("//table/tbody/tr/td[3][normalize-space()='"+name+"']")).getText();
+		return nameFound;
 
 	}
 

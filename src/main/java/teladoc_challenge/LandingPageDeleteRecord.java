@@ -18,26 +18,42 @@ public class LandingPageDeleteRecord {
 	String before_XPath = "//table/tbody/tr[";
 	String after_XPath = "]/td[11]/button";
 
+	
+	By pageNumber = By.cssSelector("li:nth-child(2) a");
+	By clickNextPage = By.cssSelector("li:nth-child(3) a");
+	By clickBeforePage = By.cssSelector("li:nth-child(1) a");
+	By userNameClickSort = By.xpath("//span[@class='header-content ng-scope ng-binding sort-descent']");
+	By noNextBtn = By.xpath("//li[@class='ng-scope disabled'][2]");
+	
+	
 	public LandingPageDeleteRecord(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	public WebElement getSpecificRow(String name) {
 
-		WebElement table = driver.findElement(tblWebTable);
-		List<WebElement> rowsList = table.findElements(tblFNameColum);
-		WebElement deletElement = null;
-		int count = 0;
-		for (WebElement row : rowsList) {
-			String firstNameClm = row.getText();
-			++count;
-			if (firstNameClm != null && firstNameClm.equals(name)) {
-				String pathString = before_XPath + count + after_XPath;
-				deletElement = table.findElement(By.xpath(pathString));
-				return deletElement;
+		boolean founName = false;
+		WebElement nameFound = null;
+		while(!founName) {
+			
+			List<WebElement> userNamesOnCurrentPage = driver.findElements(By.xpath("//table/tbody/tr/td[3][normalize-space()='"+name+"']"));
+			List<WebElement> disableNextBtn = driver.findElements(noNextBtn);
+			
+			if(userNamesOnCurrentPage.size() >0) {
+				founName = true;
+				
+			}else if(disableNextBtn.size()==0) {
+				
+				driver.findElement(clickNextPage).click();
+			
 			}
+			else {
+				return null;
+			}
+		
 		}
-		return deletElement;
+		nameFound = driver.findElement(By.xpath("//table/tbody/tr/td[3][normalize-space()='"+name+"']/following-sibling::td[8]/button"));
+		return nameFound;
 
 	}
 

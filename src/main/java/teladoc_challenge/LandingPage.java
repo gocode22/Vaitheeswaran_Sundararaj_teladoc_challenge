@@ -47,7 +47,7 @@ public class LandingPage {
 	By clickNextPage = By.cssSelector("li:nth-child(3) a");
 	By clickBeforePage = By.cssSelector("li:nth-child(1) a");
 	By userNameClickSort = By.xpath("//span[@class='header-content ng-scope ng-binding sort-descent']");
-	By noNextBtn = By.xpath("//li[@class='ng-scope disabled'][2]");
+	By noNextBtn = By.xpath("//li[@class='ng-scope disabled'][2]/a");
 	
 
 	public LandingPage(WebDriver driver) {

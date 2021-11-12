@@ -23,7 +23,7 @@ public class LandingPageDeleteRecord {
 	By clickNextPage = By.cssSelector("li:nth-child(3) a");
 	By clickBeforePage = By.cssSelector("li:nth-child(1) a");
 	By userNameClickSort = By.xpath("//span[@class='header-content ng-scope ng-binding sort-descent']");
-	By noNextBtn = By.xpath("//li[@class='ng-scope disabled'][2]");
+	By noNextBtn = By.xpath("//li[@class='ng-scope disabled'][2]/a");
 	
 	
 	public LandingPageDeleteRecord(WebDriver driver) {
@@ -38,6 +38,7 @@ public class LandingPageDeleteRecord {
 			
 			List<WebElement> userNamesOnCurrentPage = driver.findElements(By.xpath("//table/tbody/tr/td[3][normalize-space()='"+name+"']"));
 			List<WebElement> disableNextBtn = driver.findElements(noNextBtn);
+		
 			
 			if(userNamesOnCurrentPage.size() >0) {
 				founName = true;
